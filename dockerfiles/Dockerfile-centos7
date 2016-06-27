@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINER: "Eric Rumble"
+MAINTAINER "Eric Rumble"
 
 # Ensure the container is up to date
 RUN yum makecache fast \
@@ -20,13 +20,13 @@ RUN yum makecache fast \
  && yum clean all
 
 # create builder user and group per rpmbuild's recommendation
-RUN useradd -u 1000 builder
-RUN mkdir -p /home/builder/rmpbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS} \
+RUN useradd -u 1000 builder \
+ && mkdir -p /home/builder/rpmbuild/{BUILD,BUILDROOT,RPMS,SOURCES,SPECS,SRPMS} \
  && chown -R builder:builder /home/builder
 
 # drop the rpm-build script and spec file
-ADD ../scripts/build-rpm.sh /home/builder/rpmbuild/
-ADD ../specs/ruby.spec /home/builder/rpmbuild/SPECS/
+ADD scripts/build-rpm.sh /home/builder/rpmbuild/
+ADD specs/ruby.spec /home/builder/rpmbuild/SPECS/
 RUN chmod 755 /home/builder/rpmbuild/build-rpm.sh
 
 WORKDIR /home/builder/rpmbuild

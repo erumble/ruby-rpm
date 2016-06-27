@@ -16,7 +16,7 @@ Source0:	ftp://ftp.ruby-lang.org/pub/ruby/ruby-%{ruby_ver}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXX)
 
 Requires:	readline ncurses gdbm glibc openssl libyaml libffi zlib
-BuildRequires:	readline-devel ncurses-devel gdbm-devel glibc-devel gcc openssl-devel make libyaml-devel libffi-devel zlib-devel wget
+BuildRequires:	readline-devel ncurses-devel gdbm-devel glibc-devel gcc openssl-devel make libyaml-devel libffi-devel zlib-devel
 
 Provides: ruby(abi) = %{ruby_abi}
 Provides: ruby-irb
