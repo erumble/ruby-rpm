@@ -1,5 +1,5 @@
-%define ruby_ver	2.1.10
-%define ruby_abi	2.1
+%define ruby_ver	2.2.5
+%define ruby_abi	2.2
 
 Name:		ruby
 Version:	%{ruby_ver}
@@ -69,6 +69,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Oct 20 2016 Eric Rumble <ericwrumble@gmail.com> - 2.2.5
+- Update ruby version to 2.2.5
+
 * Fri Oct 28 2016 Eric Rumble <ericwrumble@gmail.com> - 2.1.10
 - Set ruby version to 2.1.10
 - Remove obsolete tags so older versions can still be installed
