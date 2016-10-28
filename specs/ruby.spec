@@ -1,5 +1,5 @@
-%define ruby_ver	2.2.5
-%define ruby_abi	2.2
+%define ruby_ver	2.3.1
+%define ruby_abi	2.3
 
 Name:		ruby
 Version:	%{ruby_ver}
@@ -69,6 +69,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Oct 28 2016 Eric Rumble <ericwrumble@gmail.com> - 2.3.1
+- Update ruby version to 2.3.1
+
 * Fri Oct 28 2016 Eric Rumble <ericwrumble@gmail.com> - 2.2.5
 - Update ruby version to 2.2.5
 
