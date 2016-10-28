@@ -24,13 +24,6 @@ Provides: ruby-rdoc
 Provides: ruby-libs
 Provides: ruby-devel
 Provides: rubygems
-Obsoletes: ruby < %{ruby_abi}
-Obsoletes: ruby-libs < %{ruby_abi}
-Obsoletes: ruby-irb < %{ruby_abi}
-Obsoletes: ruby-rdoc < %{ruby_abi}
-Obsoletes: ruby-devel < %{ruby_abi}
-Obsoletes: rubygems < %{ruby_abi}
-
 
 %description
 A dynamic, open source programming language with a focus on simplicity and productivity. 
@@ -77,12 +70,5 @@ rm -rf %{buildroot}
 
 %changelog
 * Fri Oct 28 2016 Eric Rumble <ericwrumble@gmail.com> - 2.1.10
-- Downgrade ruby version to 2.1.10
-
-* Sun Jun 26 2016 Eric Rumble <ericwrumble@gmail.com> - 2.3.1
-- Update ruby version to 2.3.1
-
-* Mon May 18 2015 Eric Rumble <ericwrumble@gmail.com> - 2.2.2
-- Initial version
-- Set ruby version to 2.2.2
-
+- Set ruby version to 2.1.10
+- Remove obsolete tags so older versions can still be installed
